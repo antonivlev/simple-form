@@ -2,7 +2,7 @@
     <head>
         <link rel="stylesheet" href="styles/page1.css"/>
         <link rel="stylesheet" href="styles/page2.css"/>
-        <link rel="stylesheet" href="styles/page3.css"/>
+        <link rel="stylesheet" href="styles/input-pages.css"/>
         <link rel="stylesheet" href="styles/style.css"/>
     </head>
     <body>
@@ -23,47 +23,95 @@
                 <h3 class="main-heading">Application Steps</h3>
                 <div class="sub-heading">Select the step you wish to complete</div>
                 <div class="step-container">
-                    <div class="step" id="step1">
+                    <div class="step">
                         <svg class="progress-bar">
                             <rect class="personal-bar" id="front-rect" x="0"></rect>
-                        </svg>
+                        </svg>            
                         <div class="step-num">STEP 1</div>
                         <div class="step-title">Personal Details</div>
                         <div class="step-details">Please complete your personal details section by clicking complete</div>
-                        <a href="#page3-personal">COMPLETE -></a>
+                        <a href="#page3">COMPLETE -></a>
                     </div>
-                    <div class="step" id="step1"></div>
-                    <div class="step" id="step1"></div>
+                    <div class="step"></div>
+                    <div class="step"></div>
                 </div>
             </div>
             
-            <div class="page" id="page3-personal">
-                <svg class="progress-bar">
-                    <rect class="personal-bar" id="front-rect" x="0"></rect>
-                </svg>
-        
-                <h3 class="main-heading">Personal Details</h3>
-                <div class="sub-heading">Required fields are marked with an asterisk *</div>
+            <div class="page" id="page3">
+                <!-- steps navigation -->
+                <div class="step-nav">
+                    <a href="#page3">
+                        <div>STEP 1</div>    
+                        <svg class="progress-bar">
+                            <rect class="personal-bar" x="0"></rect>
+                        </svg>            
+                    </a>
+                    
+                    <a href="#page4">
+                        <div>STEP 2</div>    
+                        <svg class="progress-bar">
+                            <rect class="about-you-bar" id="front-rect" x="0"></rect>
+                        </svg>            
+                    </a>
+                    
+                    <a href="#page5">
+                        <div>STEP 3</div>    
+                        <svg class="progress-bar">
+                            <rect class="files-bar" id="front-rect" x="0"></rect>
+                        </svg>            
+                    </a>
+                </div>
+                <!-- steps navigation -->
+                <h3 class="details-main-heading">Personal Details</h3>
+                <div class="details-sub-heading">Required fields are marked with an asterisk *</div>
+                
+                <label for="first-name">First name *</label>
+                <input id="first-name" class="personal-bar" type="text" name="first_name"></input>        
 
+                <label for="first-name">Second name *</label>
+                <input id="first-name" class="personal-bar" type="text" name="first_name"></input>        
+
+                <label for="first-name">Email Address *</label>
+                <input id="first-name" class="personal-bar" type="text" name="first_name"></input>        
+
+                <label for="first-name">Phone number *</label>
+                <input id="first-name" class="personal-bar" type="text" name="first_name"></input>        
+
+                <a class="next-button" href="#page4">Next</a>
+            </div>
+
+            <div class="page" id="page4">
+                <!-- steps navigation gets inserted by js -->
+                <h3 class="main-heading">More About You</h3>
+                <div class="sub-heading">Required fields are marked with an asterisk *</div>
+                
                 <label for="where-live" class="input-label">Do you live in the UK?</label>
-                <select id="where-live" class="input-select personal-bar">
+                <select id="where-live" class="input-select about-you-bar" name="live_in_uk">
                     <option value="">-</option>
-                    <option value="yes">Yes</option>
-                    <option value="no">No</option>
+                    <option value="true">Yes</option>
+                    <option value="false">No</option>
                 </select>
 
                 <label for="github-profile" class="input-label">Your Github Profile</label>
-                <input id="github-profile" class="input-text personal-bar" type="text"></input>
+                <input id="github-profile" class="input-text about-you-bar" type="text" name="git_profile"></input>        
+
+                <label for="about-you">About you</label>
+                <textarea id="about-you" placeholder="What are you up to?" class="about-you-bar" name="about_you"></textarea>
+                
+                <a class="next-button" href="#page5">Next</a>
             </div>
-            <div class="page" id="page4">1</div>
-            <div class="page" id="page5">2</div>
-            <div class="page" id="page6">3</div>                
+            <div class="page" id="page5">
+                <!-- steps navigation gets inserted by js -->
+                5
+            </div>
+            <div class="page" id="page6">6</div>                
 
             <footer class="footer">
                 <div class="footer1">moon</div>
                 <div class="footer2">sun</div>
             </footer>
         </div>
+   
         <script src="index.js"></script>
     </body>
 </html>

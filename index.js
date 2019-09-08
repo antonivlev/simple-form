@@ -1,3 +1,4 @@
+// Navigation
 function showPage(selector) {
     document.querySelectorAll(".page")
         .forEach(p => p.classList.add("hidden"));
@@ -14,31 +15,39 @@ if (window.location.hash !== "") {
     showPage("#page1");
 }
 
-document.querySelectorAll(".personal-bar").forEach(
-    el => {
+// Progress bars
+registerBar(".personal-bar");
+registerBar(".about-you-bar");
+registerBar(".files-bar");
+
+function registerBar(barSelector) {   
+    document.querySelectorAll(barSelector).forEach(el => {
         el.onchange = (e) => {
-            // console.log(e.target.value);
-            fillBar(".personal-bar", e.target.value)
+            let val = e.target.value;
+            // 'marked' means input already contributed to progress
+            // prevents progressing twice from same input
+            if (val !== "" && !el.classList.contains("marked")) {
+                fillBars(barSelector, 10);
+                el.classList.add("marked");
+            } 
+            if (val == "" && el.classList.contains("marked")) {
+                fillBars(barSelector, -10);
+                el.classList.remove("marked");
+            }   
         }    
-    }
-)
+    });    
+}
 
-function fillBar(selector, value) {
-    console.log(value);
+function fillBars(selector, value) {
     let bars = document.querySelectorAll("rect"+selector);
-    if (value !== "") {
-        bars.forEach(bar => changeWidth(bar, 10));
-    } else {
-        bars.forEach(bar => changeWidth(bar, -10));
-    }
+    bars.forEach(bar => {
+        // change width
+        let current = bar.style.width === "" ? "" : parseInt(bar.style.width);
+        bar.style.width = current+value;    
+    });
 }
 
-function changeWidth(el, amount) {
-    console.log(el);
-    let current = el.style.width;
-    if (current !== "") {
-        current = parseInt(el.style.width);
-    }
-    el.style.width = current+amount;
-    console.log(current, amount, current+amount);
-}
+// clones and inserts steps navigation from page 3
+document.querySelectorAll("#page4, #page5").forEach(page => {
+    page.insertAdjacentElement("afterbegin", document.querySelector(".step-nav").cloneNode(true));
+})

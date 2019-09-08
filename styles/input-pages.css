@@ -1,0 +1,11 @@
+#page3,#page4,#page5 {
+    margin: 0% 15%;
+}
+
+label {
+    display: block;
+}
+
+.next-button {
+    display: block;
+}
