@@ -1,0 +1,19 @@
+#page3-personal {
+    margin: 0% 15%;
+    text-align: center;
+}
+
+#page3-personal label {
+    display: block;
+}
+
+#page3-personal .progress-bar {
+    width: 180px;
+    height: 20px;
+}
+
+#page3-personal .progress-bar #front-rect {
+    fill: black;
+    height: 20;
+    width: 0;
+}

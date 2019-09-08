@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="styles/page1.css"/>
+        <link rel="stylesheet" href="styles/page2.css"/>
+        <link rel="stylesheet" href="styles/page3.css"/>
+        <link rel="stylesheet" href="styles/style.css"/>
+    </head>
+    <body>
+        <div class="app">
+            <header class="header">
+                <a href="#page1" class="header1">Netsells</a>
+                <a href="#page1" class="header2">Javascript Challenge</a>
+                <a href="#page2" class="header3">...</a>
+            </header>
+
+            <div class="page" id="page1">
+                <div class="red-heading">Welcome</div>
+                <h1 class="main-heading">We're excited to see what you can do!</h1>
+                <a class="begin-button" href="#page2">BEGIN</a>
+            </div>
+
+            <div class="page" id="page2">
+                <h3 class="main-heading">Application Steps</h3>
+                <div class="sub-heading">Select the step you wish to complete</div>
+                <div class="step-container">
+                    <div class="step" id="step1">
+                        <svg class="progress-bar">
+                            <rect class="personal-bar" id="front-rect" x="0"></rect>
+                        </svg>
+                        <div class="step-num">STEP 1</div>
+                        <div class="step-title">Personal Details</div>
+                        <div class="step-details">Please complete your personal details section by clicking complete</div>
+                        <a href="#page3-personal">COMPLETE -></a>
+                    </div>
+                    <div class="step" id="step1"></div>
+                    <div class="step" id="step1"></div>
+                </div>
+            </div>
+            
+            <div class="page" id="page3-personal">
+                <svg class="progress-bar">
+                    <rect class="personal-bar" id="front-rect" x="0"></rect>
+                </svg>
+        
+                <h3 class="main-heading">Personal Details</h3>
+                <div class="sub-heading">Required fields are marked with an asterisk *</div>
+
+                <label for="where-live" class="input-label">Do you live in the UK?</label>
+                <select id="where-live" class="input-select personal-bar">
+                    <option value="">-</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+
+                <label for="github-profile" class="input-label">Your Github Profile</label>
+                <input id="github-profile" class="input-text personal-bar" type="text"></input>
+            </div>
+            <div class="page" id="page4">1</div>
+            <div class="page" id="page5">2</div>
+            <div class="page" id="page6">3</div>                
+
+            <footer class="footer">
+                <div class="footer1">moon</div>
+                <div class="footer2">sun</div>
+            </footer>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>
