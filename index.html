@@ -65,19 +65,23 @@
                 <h3 class="details-main-heading">Personal Details</h3>
                 <div class="details-sub-heading">Required fields are marked with an asterisk *</div>
                 
+                <!-- input fields -->
                 <label for="first-name">First name *</label>
-                <input id="first-name" class="personal-bar" type="text" name="first_name"></input>        
+                <input required id="first-name" class="personal-bar" type="text" name="first_name"></input>
+                <div class="invalid-writing" for="first-name">This field is required</div>                
 
-                <label for="first-name">Second name *</label>
-                <input id="first-name" class="personal-bar" type="text" name="first_name"></input>        
+                <label for="second-name">Second name *</label>
+                <input id="second-name" class="personal-bar" type="text" name="first_name"></input>        
 
-                <label for="first-name">Email Address *</label>
-                <input id="first-name" class="personal-bar" type="text" name="first_name"></input>        
+                <label for="email">Email Address *</label>
+                <input required id="email" class="personal-bar" type="text" name="first_name"></input>        
+                <div class="invalid-writing" for="email">This field is required</div>                                
 
-                <label for="first-name">Phone number *</label>
-                <input id="first-name" class="personal-bar" type="text" name="first_name"></input>        
+                <label for="phone-number">Phone number *</label>
+                <input required id="phone-number" class="personal-bar" type="text" name="first_name"></input>        
+                <div class="invalid-writing" for="phone-number">This field is required</div>                                
 
-                <a class="next-button" href="#page4">Next</a>
+                <button class="next-button" href="#page4">Next</button>
             </div>
 
             <div class="page" id="page4">

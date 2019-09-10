@@ -9,3 +9,7 @@ label {
 .next-button {
     display: block;
 }
+
+.invalid-writing {
+    visibility: hidden;
+}

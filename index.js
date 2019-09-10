@@ -51,3 +51,18 @@ function fillBars(selector, value) {
 document.querySelectorAll("#page4, #page5").forEach(page => {
     page.insertAdjacentElement("afterbegin", document.querySelector(".step-nav").cloneNode(true));
 })
+
+document.querySelector("#page3 .next-button").onclick = () => {
+    let allValid = true;
+    // check all required input fields on page
+    document.querySelectorAll("#page3 *[required]").forEach(field => {
+        let invalidWritingEl = document.querySelector(".invalid-writing[for="+field.id+"]");
+        if (field.value === "") {
+            allValid = false;
+            invalidWritingEl.style.visibility = "visible";
+        }
+    });
+    if (allValid) {
+        window.location.hash = "#page4"
+    }
+}
