@@ -10,6 +10,10 @@ label {
     display: block;
 }
 
-.invalid-writing {
+.invisible {
     visibility: hidden;
+}
+
+.invalid {
+    outline: 1px solid red;
 }

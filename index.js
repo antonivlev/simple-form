@@ -47,22 +47,24 @@ function fillBars(selector, value) {
     });
 }
 
-// clones and inserts steps navigation from page 3
+// Clones and inserts steps navigation from page 3 into page4 and page5
 document.querySelectorAll("#page4, #page5").forEach(page => {
     page.insertAdjacentElement("afterbegin", document.querySelector(".step-nav").cloneNode(true));
 })
 
-document.querySelector("#page3 .next-button").onclick = () => {
-    let allValid = true;
-    // check all required input fields on page
-    document.querySelectorAll("#page3 *[required]").forEach(field => {
-        let invalidWritingEl = document.querySelector(".invalid-writing[for="+field.id+"]");
-        if (field.value === "") {
-            allValid = false;
-            invalidWritingEl.style.visibility = "visible";
+document.querySelectorAll("*[required]").forEach(inputEl => {
+    // Writing underneath input showing when it's invalid
+    let invalidWritingEl = document.querySelector(".invalid-writing[for="+inputEl.id+"]");
+    let checkEmpty = () => {
+        if (inputEl.value === "") {
+            inputEl.classList.add("invalid");
+            invalidWritingEl.classList.remove("invisible");
+        } else {
+            inputEl.classList.remove("invalid");
+            invalidWritingEl.classList.add("invisible");
         }
-    });
-    if (allValid) {
-        window.location.hash = "#page4"
     }
-}
+
+    inputEl.onfocus = checkEmpty;
+    //inputEl.oninput = checkEmpty;
+});
