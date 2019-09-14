@@ -1,16 +1,21 @@
 #page1 {
+    display: grid;
+    justify-items: center;
     text-align: center;
 }
 #page1 .red-heading {
     color: #E05D50;
 }
 #page1 .main-heading {
-    padding-left: 15%;
-    padding-right: 15%;
-    font-family: Heebo, sans-serif;
-    font-size: 50px;
+    width: 60%;
+    /* padding-left: 15%;
+    padding-right: 15%; */
+    font-family: Heebo;
+    font-size: 60px;
 }
 #page1 .begin-button {
+    display: block;
+    width: 50px;
     padding: 10px 30px;
     text-decoration: none;
     color: white;

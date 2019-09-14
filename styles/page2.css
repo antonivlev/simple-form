@@ -1,3 +1,15 @@
+#page2 {
+    display: grid;
+    justify-items: center;
+}
+
+#page2 .main-heading {
+    font-family: Heebo;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
 #page2 .step-container {
     display: flex;
     justify-content: space-evenly;
@@ -5,9 +17,33 @@
 }
 
 #page2 .step-container .step {
+    display: grid;
+    grid-template-rows: 60px 30px auto 50px;
     background-color: white;
-    width: 180px;
+    width: 200px;
     height: 250px;
     margin: 20px;
+}
+
+/* Application step */
+.step .step-num {
+    margin: 0px 20px;
+}
+.step .step-title {
+    width: 100px;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0px 20px;
+    height: auto;
+}
+.step .step-details {
+    font-size: 11px;
+    margin: 0px 20px;
+}
+.step .complete-button {
+    text-decoration: none;
+    line-height: 50px;
+    text-align: center;
+    background-color: #C0C0C0
 }
 
