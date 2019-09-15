@@ -68,3 +68,21 @@ document.querySelectorAll("*[required]").forEach(inputEl => {
     inputEl.onfocus = checkEmpty;
     inputEl.oninput = checkEmpty;
 });
+
+document.querySelectorAll("input[type='file']").forEach(fileInput => {
+    fileInput.onchange = (e) => 
+        document.querySelector("#upload-text").innerText = fileInput.files[0].name;
+})
+
+function dropHandler(e) {
+    let fileName = e.dataTransfer.files[0].name;
+    document.querySelector("#upload-text").innerText = fileName;    
+    e.preventDefault();
+}
+
+function dragOverHandler(e) {
+    console.log("dragover");
+  
+    // Prevent default behavior (Prevent file from being opened)
+    e.preventDefault();
+}

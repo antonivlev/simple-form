@@ -66,18 +66,18 @@
                 <div class="details-sub-heading">Required fields are marked with an asterisk *</div>
                 
                 <!-- input fields -->
-                <label for="first-name">First name *</label>
+                <label for="first-name">First name</label>
                 <input required id="first-name" class="personal-bar" type="text" name="first_name"></input>
                 <div class="invalid-writing invisible" for="first-name">This field is required</div>                
 
-                <label for="second-name">Second name *</label>
+                <label for="second-name">Second name</label>
                 <input id="second-name" class="personal-bar" type="text" name="first_name"></input>        
 
-                <label for="email">Email Address *</label>
+                <label for="email">Email Address</label>
                 <input required id="email" class="personal-bar" type="text" name="first_name"></input>        
                 <div class="invalid-writing invisible" for="email">This field is required</div>                                
 
-                <label for="phone-number">Phone number *</label>
+                <label for="phone-number">Phone number</label>
                 <input required id="phone-number" class="personal-bar" type="text" name="first_name"></input>        
                 <div class="invalid-writing invisible" for="phone-number">This field is required</div>                                
 
@@ -86,15 +86,16 @@
 
             <div class="page" id="page4">
                 <!-- steps navigation gets inserted here by js -->
-                <h3 class="main-heading">More About You</h3>
-                <div class="sub-heading">Required fields are marked with an asterisk *</div>
+                <h3 class="details-main-heading">More About You</h3>
+                <div class="details-sub-heading">Required fields are marked with an asterisk *</div>
                 
                 <label for="where-live" class="input-label">Do you live in the UK?</label>
-                <select id="where-live" class="input-select about-you-bar" name="live_in_uk">
-                    <option value="">-</option>
+                <select required id="where-live" class="input-select about-you-bar" name="live_in_uk">
+                    <option value=""></option>
                     <option value="true">Yes</option>
                     <option value="false">No</option>
-                </select>
+                </select> 
+                <div class="invalid-writing invisible" for="where-live">This field is required</div>                                
 
                 <label for="github-profile" class="input-label">Your Github Profile</label>
                 <input id="github-profile" class="input-text about-you-bar" type="text" name="git_profile"></input>        
@@ -106,7 +107,16 @@
             </div>
             <div class="page" id="page5">
                 <!-- steps navigation gets inserted here by js -->
-                5
+                <div class="cv" 
+                    ondrop="dropHandler(event);" 
+                    ondragover="dragOverHandler(event);">
+                    <div>pic</div>
+                    <div id="upload-text">Upload Your CV</div>
+                    <div>Drag and Drop or upload your CV file 
+                        <label for="cv-upload" class="upload-label" id="upload-label">here</label>
+                    </div>
+                    <input id="cv-upload" type="file" style="display: none">
+                </div>
             </div>
             <div class="page" id="page6">6</div>                
 
