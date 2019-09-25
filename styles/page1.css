@@ -2,6 +2,7 @@
     display: grid;
     justify-items: center;
     text-align: center;
+    /* align-self: center; */
 }
 #page1 .red-heading {
     color: #E05D50;

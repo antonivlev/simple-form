@@ -13,6 +13,31 @@
                 <a href="#page2" class="header3">...</a>
             </header>
 
+            <!-- steps navigation -->
+            <div class="nav-steps nav-steps-hide">
+                <a class="nav-step" href="#page3">
+                    <div>STEP 1</div>    
+                    <svg class="progress-bar">
+                        <rect class="personal-bar" x="0"></rect>
+                    </svg>            
+                </a>
+                
+                <a class="nav-step" href="#page4">
+                    <div>STEP 2</div>    
+                    <svg class="progress-bar">
+                        <rect class="about-you-bar" id="front-rect" x="0"></rect>
+                    </svg>            
+                </a>
+                
+                <a class="nav-step" href="#page5">
+                    <div>STEP 3</div>    
+                    <svg class="progress-bar">
+                        <rect class="files-bar" id="front-rect" x="0"></rect>
+                    </svg>            
+                </a>
+            </div>
+            <!-- steps navigation -->
+
             <div class="page" id="page1">
                 <div class="red-heading">Welcome</div>
                 <h1 class="main-heading">We're excited to see what you can do!</h1>
@@ -38,30 +63,6 @@
             </div>
             
             <div class="page" id="page3">
-                <!-- steps navigation -->
-                <div class="nav-steps">
-                    <a class="nav-step" href="#page3">
-                        <div>STEP 1</div>    
-                        <svg class="progress-bar">
-                            <rect class="personal-bar" x="0"></rect>
-                        </svg>            
-                    </a>
-                    
-                    <a class="nav-step" href="#page4">
-                        <div>STEP 2</div>    
-                        <svg class="progress-bar">
-                            <rect class="about-you-bar" id="front-rect" x="0"></rect>
-                        </svg>            
-                    </a>
-                    
-                    <a class="nav-step" href="#page5">
-                        <div>STEP 3</div>    
-                        <svg class="progress-bar">
-                            <rect class="files-bar" id="front-rect" x="0"></rect>
-                        </svg>            
-                    </a>
-                </div>
-                <!-- steps navigation -->
                 <h3 class="details-main-heading">Personal Details</h3>
                 <div class="details-sub-heading">Required fields are marked with an asterisk *</div>
                 
@@ -106,16 +107,26 @@
                 <a class="next-button" href="#page5">Next</a>
             </div>
             <div class="page" id="page5">
-                <!-- steps navigation gets inserted here by js -->
-                <div class="cv" 
+                <div id="cv-drop" class="cv" 
                     ondrop="dropHandler(event);" 
                     ondragover="dragOverHandler(event);">
-                    <div>pic</div>
-                    <div id="upload-text">Upload Your CV</div>
+                    <img class="file-img" src="file.png"></img>
+                    <div class="upload-text">Upload Your CV</div>
                     <div>Drag and Drop or upload your CV file 
                         <label for="cv-upload" class="upload-label" id="upload-label">here</label>
                     </div>
                     <input id="cv-upload" type="file" style="display: none">
+                </div>
+
+                <div id="cover-letter-drop" class="cv" 
+                    ondrop="dropHandler(event);" 
+                    ondragover="dragOverHandler(event);">
+                    <div>pic</div>
+                    <div class="upload-text">Upload Your Cover Letter</div>
+                    <div>Drag and Drop or upload your Cover Letter file 
+                        <label for="cover-letter-upload" class="upload-label" id="upload-label">here</label>
+                    </div>
+                    <input id="cover-letter-upload" type="file" style="display: none">
                 </div>
             </div>
             <div class="page" id="page6">6</div>                

@@ -5,8 +5,21 @@ function showPage(selector) {
     document.querySelector(selector).classList.remove("hidden");
 }
 
+// so navigation shows on reload
+showNavIfNeeded()
+
 window.onhashchange = (e) => {
     showPage(window.location.hash);
+    showNavIfNeeded();
+}
+
+function showNavIfNeeded() {
+    // show steps navigation on these pages
+    if (["#page2", "#page3", "#page4", "#page5"].includes(window.location.hash)) {
+        document.querySelector(".nav-steps").classList.remove("nav-steps-hide");
+    } else {
+        document.querySelector(".nav-steps").classList.add("nav-steps-hide");
+    };
 }
 
 if (window.location.hash !== "") {
@@ -14,6 +27,8 @@ if (window.location.hash !== "") {
 } else {
     showPage("#page1");
 }
+
+
 
 // Progress bars
 registerBar(".personal-bar");
@@ -47,11 +62,9 @@ function fillBars(selector, value) {
     });
 }
 
-// Clones and inserts steps navigation from page 3 into page4 and page5
-document.querySelectorAll("#page4, #page5").forEach(page => {
-    page.insertAdjacentElement("afterbegin", document.querySelector(".nav-steps").cloneNode(true));
-})
 
+
+// Input field validation
 document.querySelectorAll("*[required]").forEach(inputEl => {
     // Writing underneath input showing when it's invalid
     let invalidWritingEl = document.querySelector(".invalid-writing[for="+inputEl.id+"]");
@@ -69,20 +82,34 @@ document.querySelectorAll("*[required]").forEach(inputEl => {
     inputEl.oninput = checkEmpty;
 });
 
-document.querySelectorAll("input[type='file']").forEach(fileInput => {
-    fileInput.onchange = (e) => 
-        document.querySelector("#upload-text").innerText = fileInput.files[0].name;
-})
 
-function dropHandler(e) {
-    let fileName = e.dataTransfer.files[0].name;
-    document.querySelector("#upload-text").innerText = fileName;    
-    e.preventDefault();
-}
 
-function dragOverHandler(e) {
-    console.log("dragover");
-  
-    // Prevent default behavior (Prevent file from being opened)
-    e.preventDefault();
+
+// File upload
+registerDragDrop("#cv-drop")
+registerDragDrop("#cover-letter-drop")
+
+/*
+Expects:
+
+div
+    .uploadText  
+    input type=file 
+
+Enables drag and drop over div, puts uploaded file name in .uploadText's inner text
+*/
+function registerDragDrop(dropDivSelector) {
+    let dropDiv = document.querySelector(dropDivSelector);
+    dropDiv.ondrop = (e) => {
+        // TODO: array access, should handle potential error
+        let fileName = e.dataTransfer.files[0].name;
+        dropDiv.querySelector(".upload-text").innerText = fileName;    
+        e.preventDefault();
+    }
+    dropDiv.ondragover = (e) => e.preventDefault();
+    
+    // Upload through input, where it says "here"
+    let fileInput = dropDiv.querySelector("input[type='file']");
+    fileInput.onchange = 
+        (e) => dropDiv.querySelector(".upload-text").innerText = fileInput.files[0].name;
 }
