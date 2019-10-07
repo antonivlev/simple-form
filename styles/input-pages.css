@@ -4,6 +4,7 @@
 }
 
 .details-main-heading {
+    margin-top: 30px;
     text-align: center;
     margin-bottom: 0px;
 }
@@ -29,7 +30,11 @@ input {
     font-family: Oswald;
     border: 1px solid grey;
 }
+input:not([required]) {
+    margin-bottom: 20px;
+}
 .invalid-writing {
+    height: 20px;
     font-size: 12px;
     color: red;
 }
@@ -41,6 +46,7 @@ input {
 }
 
 .next-button {
+    margin-top: 20px;
     float: right;
     width: 60px;
     text-align: center;
@@ -65,6 +71,7 @@ textarea {
 
 /*Files*/
 .cv,.cover-letter {
+    border: 1px dashed grey;
     width: 100%;
     margin: 20px 0px;
     height: 100px;
@@ -81,4 +88,7 @@ textarea {
 .file-img {
     width: 30px;
     height: 30px;
+}
+.hide-input {
+    display: none;
 }

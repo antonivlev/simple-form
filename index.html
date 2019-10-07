@@ -13,123 +13,122 @@
                 <a href="#page2" class="header3">...</a>
             </header>
 
-            <!-- steps navigation -->
-            <div class="nav-steps nav-steps-hide">
-                <a class="nav-step" href="#page3">
-                    <div>STEP 1</div>    
-                    <svg class="progress-bar">
-                        <rect class="personal-bar" x="0"></rect>
-                    </svg>            
-                </a>
-                
-                <a class="nav-step" href="#page4">
-                    <div>STEP 2</div>    
-                    <svg class="progress-bar">
-                        <rect class="about-you-bar" id="front-rect" x="0"></rect>
-                    </svg>            
-                </a>
-                
-                <a class="nav-step" href="#page5">
-                    <div>STEP 3</div>    
-                    <svg class="progress-bar">
-                        <rect class="files-bar" id="front-rect" x="0"></rect>
-                    </svg>            
-                </a>
-            </div>
-            <!-- steps navigation -->
-
-            <div class="page" id="page1">
-                <div class="red-heading">Welcome</div>
-                <h1 class="main-heading">We're excited to see what you can do!</h1>
-                <a class="begin-button" href="#page2">BEGIN</a>
-            </div>
-
-            <div class="page" id="page2">
-                <h3 class="main-heading">Application Steps</h3>
-                <div class="sub-heading">Select the step you wish to complete</div>
-                <div class="step-container">
-                    <div class="step">
+            <div class="content">
+                <!-- steps navigation -->
+                <div class="nav-steps nav-steps-hide">
+                    <a class="nav-step" href="#page3">
+                        <div>STEP 1</div>    
                         <svg class="progress-bar">
-                            <rect class="personal-bar" id="front-rect" x="0"></rect>
+                            <rect class="personal-bar" x="0"></rect>
                         </svg>            
-                        <div class="step-num">STEP 1</div>
-                        <div class="step-title">Personal Details</div>
-                        <div class="step-details">Please complete your personal details section by clicking complete</div>
-                        <a class="complete-button" href="#page3">COMPLETE -></a>
-                    </div>
-                    <div class="step"></div>
-                    <div class="step"></div>
+                    </a>
+                    
+                    <a class="nav-step" href="#page4">
+                        <div>STEP 2</div>    
+                        <svg class="progress-bar">
+                            <rect class="about-you-bar" id="front-rect" x="0"></rect>
+                        </svg>            
+                    </a>
+                    
+                    <a class="nav-step" href="#page5">
+                        <div>STEP 3</div>    
+                        <svg class="progress-bar">
+                            <rect class="files-bar" id="front-rect" x="0"></rect>
+                        </svg>            
+                    </a>
                 </div>
-            </div>
-            
-            <div class="page" id="page3">
-                <h3 class="details-main-heading">Personal Details</h3>
-                <div class="details-sub-heading">Required fields are marked with an asterisk *</div>
-                
-                <!-- input fields -->
-                <label for="first-name">First name</label>
-                <input required id="first-name" class="personal-bar" type="text" name="first_name"></input>
-                <div class="invalid-writing invisible" for="first-name">This field is required</div>                
+                <!-- steps navigation -->
 
-                <label for="second-name">Second name</label>
-                <input id="second-name" class="personal-bar" type="text" name="first_name"></input>        
-
-                <label for="email">Email Address</label>
-                <input required id="email" class="personal-bar" type="text" name="first_name"></input>        
-                <div class="invalid-writing invisible" for="email">This field is required</div>                                
-
-                <label for="phone-number">Phone number</label>
-                <input required id="phone-number" class="personal-bar" type="text" name="first_name"></input>        
-                <div class="invalid-writing invisible" for="phone-number">This field is required</div>                                
-
-                <a class="next-button" href="#page4">Next</a>
-            </div>
-
-            <div class="page" id="page4">
-                <!-- steps navigation gets inserted here by js -->
-                <h3 class="details-main-heading">More About You</h3>
-                <div class="details-sub-heading">Required fields are marked with an asterisk *</div>
-                
-                <label for="where-live" class="input-label">Do you live in the UK?</label>
-                <select required id="where-live" class="input-select about-you-bar" name="live_in_uk">
-                    <option value=""></option>
-                    <option value="true">Yes</option>
-                    <option value="false">No</option>
-                </select> 
-                <div class="invalid-writing invisible" for="where-live">This field is required</div>                                
-
-                <label for="github-profile" class="input-label">Your Github Profile</label>
-                <input id="github-profile" class="input-text about-you-bar" type="text" name="git_profile"></input>        
-
-                <label for="about-you">About you</label>
-                <textarea id="about-you" placeholder="What are you up to?" class="about-you-bar" name="about_you"></textarea>
-                
-                <a class="next-button" href="#page5">Next</a>
-            </div>
-            <div class="page" id="page5">
-                <div id="cv-drop" class="cv" 
-                    ondrop="dropHandler(event);" 
-                    ondragover="dragOverHandler(event);">
-                    <img class="file-img" src="file.png"></img>
-                    <div class="upload-text">Upload Your CV</div>
-                    <div>Drag and Drop or upload your CV file 
-                        <label for="cv-upload" class="upload-label" id="upload-label">here</label>
-                    </div>
-                    <input id="cv-upload" type="file" style="display: none">
+                <div class="page" id="page1">
+                    <div class="red-heading">Welcome</div>
+                    <h1 class="main-heading">We're excited to see what you can do!</h1>
+                    <a class="begin-button" href="#page2">BEGIN</a>
                 </div>
 
-                <div id="cover-letter-drop" class="cv" 
-                    ondrop="dropHandler(event);" 
-                    ondragover="dragOverHandler(event);">
-                    <div>pic</div>
-                    <div class="upload-text">Upload Your Cover Letter</div>
-                    <div>Drag and Drop or upload your Cover Letter file 
-                        <label for="cover-letter-upload" class="upload-label" id="upload-label">here</label>
+                <div class="page" id="page2">
+                    <h3 class="main-heading">Application Steps</h3>
+                    <div class="sub-heading">Select the step you wish to complete</div>
+                    <div class="step-container">
+                        <div class="step">
+                            <svg class="progress-bar">
+                                <rect class="personal-bar" id="front-rect" x="0"></rect>
+                            </svg>            
+                            <div class="step-num">STEP 1</div>
+                            <div class="step-title">Personal Details</div>
+                            <div class="step-details">Please complete your personal details section by clicking complete</div>
+                            <a class="complete-button" href="#page3">COMPLETE -></a>
+                        </div>
+                        <div class="step"></div>
+                        <div class="step"></div>
                     </div>
-                    <input id="cover-letter-upload" type="file" style="display: none">
+                    <a href="#" id="submit-button" class="submit-button hidden">SUBMIT APPLICATION</a>
                 </div>
+                
+                <div class="page" id="page3">
+                    <h3 class="details-main-heading">Personal Details</h3>
+                    <div class="details-sub-heading">Required fields are marked with an asterisk *</div>
+                    
+                    <!-- input fields -->
+                    <label for="first-name">First name</label>
+                    <input required id="first-name" class="personal-bar" type="text" name="first_name"></input>
+                    <div class="invalid-writing invisible" for="first-name">This field is required</div>                
+
+                    <label for="second-name">Second name</label>
+                    <input id="second-name" class="personal-bar" type="text" name="last_name"></input>        
+
+                    <label for="email">Email Address</label>
+                    <input required id="email" class="personal-bar" type="text" name="email"></input>        
+                    <div class="invalid-writing invisible" for="email">This field is required</div>                                
+
+                    <label for="phone-number">Phone number</label>
+                    <input required id="phone-number" class="personal-bar" type="text" name="first_name"></input>        
+                    <div class="invalid-writing invisible" for="phone-number">This field is required</div>                                
+
+                    <a class="next-button" href="#page4">Next</a>
+                </div>
+
+                <div class="page" id="page4">
+                    <h3 class="details-main-heading">More About You</h3>
+                    <div class="details-sub-heading">Required fields are marked with an asterisk *</div>
+                    
+                    <label for="where-live" class="input-label">Do you live in the UK?</label>
+                    <select required id="where-live" class="input-select about-you-bar" name="live_in_uk">
+                        <option value=""></option>
+                        <option value="true">Yes</option>
+                        <option value="false">No</option>
+                    </select> 
+                    <div class="invalid-writing invisible" for="where-live">This field is required</div>                                
+
+                    <label for="github-profile" class="input-label">Your Github Profile</label>
+                    <input id="github-profile" class="input-text about-you-bar" type="text" name="git_profile"></input>        
+
+                    <label for="about-you">About you</label>
+                    <textarea id="about-you" placeholder="What are you up to?" class="about-you-bar" name="about_you"></textarea>
+                    
+                    <a class="next-button" href="#page5">Next</a>
+                </div>
+                <div class="page" id="page5">
+                    <div id="cv-drop" class="cv">
+                        <img class="file-img" src="file.png"></img>
+                        <div class="upload-text">Upload Your CV</div>
+                        <div>Drag and Drop or upload your CV file 
+                            <label for="cv-upload" class="upload-label" id="upload-label">here</label>
+                        </div>
+                        <input name="cv" required id="cv-upload" class="files-bar hide-input" type="file">
+                    </div>
+
+                    <div id="cover-letter-drop" class="cv">                        
+                        <div>pic</div>
+                        <div class="upload-text">Upload Your Cover Letter</div>
+                        <div>Drag and Drop or upload your Cover Letter file 
+                            <label for="cover-letter-upload" class="upload-label" id="upload-label">here</label>
+                        </div>
+                        <input name="cover_letter" id="cover-letter-upload" type="file" class="hide-input">
+                    </div>
+                    <a class="next-button" href="#page2">Next</a>
+                </div>
+                <div class="page" id="page6">6</div>                
             </div>
-            <div class="page" id="page6">6</div>                
 
             <footer class="footer">
                 <object class="moon-sun" type="image/svg+xml" data="moon.svg"></object>

@@ -1,4 +1,5 @@
 #page2 {
+    /* align-self: center; */
     display: grid;
     justify-items: center;
 }
@@ -25,6 +26,17 @@
     margin: 20px;
 }
 
+#page2 .submit-button {
+    display: block;
+    width: 200px;
+    height: 25px;
+    text-align: center;
+    padding: 5px 0px;
+    text-decoration: none;
+    color: white;
+    background-color: #E05D50;
+}
+
 /* Application step */
 .step .step-num {
     margin: 0px 20px;
@@ -46,4 +58,5 @@
     text-align: center;
     background-color: #C0C0C0
 }
+
 

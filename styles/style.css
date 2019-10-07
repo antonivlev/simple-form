@@ -4,9 +4,11 @@ body {
     margin: 0;
     padding: 0;
 }
+
 body * {
-    border: 1px dashed grey;
+    /* border: 1px dashed grey; */
 }
+
 .hidden {
     display: none !important;
 }
@@ -14,24 +16,26 @@ body * {
 .app {
     font-family: Oswald;
     display: grid;
-    grid-template-rows: 70px auto 1fr;
+    grid-template-rows: 70px 1fr 70px;
     height: 100vh;
-
     background-position: center;
     background-image: url("page-bground.png");
 }
+.app .content {
+    align-self: start;
+    display: grid;
+    /* grid-template-rows: 70px 1fr; */
+}
 
+
+/* step navigation */
 .nav-steps-hide {
     display: none !important;
 }
-
-/* Step navigation */
 .nav-steps {
     display: flex;
-    justify-content: space-between;
-    /* width: 260%; */
-    /* margin-left: -80%; */
-    height: 60px;
+    justify-content: space-evenly;
+    flex-flow: row wrap;
     grid-template-columns: 1fr 1fr 1fr;
 }
 .nav-step {
@@ -54,7 +58,6 @@ body * {
     justify-self: center;
     align-self: center;
 }
-
 .progress-bar rect {
     fill: black;
     height: 10;
@@ -88,6 +91,7 @@ body * {
     justify-items: center;
 }
 .moon-sun {
+    margin-left: 30px;
     width: 20px;
     height: 20px;
 }
