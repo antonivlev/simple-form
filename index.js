@@ -75,9 +75,11 @@ function registerBarTag(barSelector) {
 
 let showSubmitIfComplete = () => {
     let complete = true;
-    // TODO: can this be calculated with just a query?
-    document.querySelectorAll("*[required]").forEach(el => complete = (el.value !== ''));
-    console.log(complete);
+    // is any required input empty? TODO: can this be calculated with one query string?
+    document.querySelectorAll("*[required]").forEach(el => {
+        if (el.value === "") complete = false;
+    }); 
+
     if (complete) {
         document.querySelector(".submit-button").classList.remove("hidden");
     } else {
@@ -144,15 +146,19 @@ function registerDragDrop(dropDivSelector) {
         (e) => dropDiv.querySelector(".upload-text").innerText = fileInput.files[0].name;
 }
 
-document.querySelector("#submit-button").onclick = (e) => {
+let submitButton = document.querySelector("#submit-button");
+submitButton.onclick = (e) => {
+    // loading appearance
+    submitButton.classList.add("loading");
+    submitButton.innerText = "SUBMITTING...";
+    
     let payload = {};
     // gather inputs into payload
     document.querySelectorAll("input,select,textarea").forEach(inputEl => {
-        // don't include if empty input
-        // e.g. no last name
+        // don't include if empty optional input e.g. no last name
         if (!inputEl.value) return;
         
-        // the 'name' attribute in the tag acts as payload key
+        // the 'name' attribute in the input element acts as payload key
         let key = inputEl.name;
         
         // handle bools and files
@@ -170,6 +176,11 @@ document.querySelector("#submit-button").onclick = (e) => {
     fetch( url, {method: "POST", mode: "no-cors", body: JSON.stringify(payload)} )
         .then(res => {
             console.log(res);
+            window.location.hash = "#page6";
+            
+            // clean up loading appearance
+            submitButton.classList.remove("loading");
+            submitButton.innerText = "SUBMIT AGAIN";
         });
-    console.log(payload);
+    console.log("payload sent: ", payload);
 }
