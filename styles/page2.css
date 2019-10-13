@@ -26,7 +26,7 @@
     margin: 20px;
 }
 
-#page2 .submit-button {
+.submit-button {
     display: block;
     width: 200px;
     height: 25px;
@@ -35,6 +35,10 @@
     text-decoration: none;
     color: white;
     background-color: #E05D50;
+    cursor: pointer; 
+}
+.loading {
+    background-color: rgb(138, 138, 138);
 }
 
 /* Application step */
