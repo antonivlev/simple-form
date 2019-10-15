@@ -2,6 +2,7 @@
     <head>
         <link rel="stylesheet" href="styles/page1.css"/>
         <link rel="stylesheet" href="styles/page2.css"/>
+        <link rel="stylesheet" href="styles/page6.css"/>
         <link rel="stylesheet" href="styles/input-pages.css"/>
         <link rel="stylesheet" href="styles/style.css"/>
     </head>
@@ -81,7 +82,7 @@
                     <div class="invalid-writing invisible" for="email">This field is required</div>                                
 
                     <label for="phone-number">Phone number</label>
-                    <input required id="phone-number" class="personal-bar" type="text" name="first_name"></input>        
+                    <input required id="phone-number" class="personal-bar" type="text" name="phone_number"></input>        
                     <div class="invalid-writing invisible" for="phone-number">This field is required</div>                                
 
                     <a class="next-button" href="#page4">Next</a>
@@ -100,10 +101,10 @@
                     <div class="invalid-writing invisible" for="where-live">This field is required</div>                                
 
                     <label for="github-profile" class="input-label">Your Github Profile</label>
-                    <input id="github-profile" class="input-text about-you-bar" type="text" name="git_profile"></input>        
+                    <input required id="github-profile" class="input-text about-you-bar" type="text" name="git_profile"></input>        
 
                     <label for="about-you">About you</label>
-                    <textarea id="about-you" placeholder="What are you up to?" class="about-you-bar" name="about_you"></textarea>
+                    <textarea required id="about-you" placeholder="What are you up to?" class="about-you-bar" name="about_you"></textarea>
                     
                     <a class="next-button" href="#page5">Next</a>
                 </div>
@@ -128,7 +129,9 @@
                     <a class="next-button" href="#page2">Next</a>
                 </div>
                 <div class="page" id="page6">
-                    <div>Thank you!</div>
+                    <div class="red-heading">Success!</div>
+                    <h1 class="main-heading">Thank you</h1>
+                    <a class="home-button" href="#page1">HOME</a>
                 </div>                
             </div>
 

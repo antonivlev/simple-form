@@ -1,0 +1,26 @@
+#page6 {
+    display: grid;
+    justify-items: center;
+    text-align: center;
+}
+#page6 .red-heading {
+    margin-top: 50px;
+    height: 25px;
+    color: #E05D50;
+    align-self: end;
+}
+
+#page6 .main-heading {
+    width: 60%;
+    font-family: Heebo;
+    font-size: 60px;
+}
+#page6 .home-button {
+    display: block;
+    width: 50px;
+    height: 25px;
+    padding: 10px 30px;
+    text-decoration: none;
+    color: white;
+    background-color: #E05D50;
+}

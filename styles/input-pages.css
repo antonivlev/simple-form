@@ -37,7 +37,10 @@ label[for=phone-number]::after {
     content: " *";
     color: red;
 }
-
+label[for=about-you]::after {
+    content: " *";
+    color: red;
+}
 
 input {
     background-color: transparent;

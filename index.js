@@ -10,11 +10,22 @@ showNavIfNeeded()
 
 window.onhashchange = (e) => {
     showPage(window.location.hash);
+    highlightCurrentStep();
     showNavIfNeeded();
 }
 
+function highlightCurrentStep() {
+    document.querySelectorAll(".nav-step").forEach(step => {
+        if (step.href.includes(window.location.hash)) {
+            step.classList.add("red-border");
+        } else {
+            step.classList.remove("red-border");
+        }
+    });
+}
+
 function showNavIfNeeded() {
-    // show steps navigation on these pages
+    // if on these pages, show steps navigation 
     if (["#page2", "#page3", "#page4", "#page5"].includes(window.location.hash)) {
         document.querySelector(".nav-steps").classList.remove("nav-steps-hide");
     } else {
