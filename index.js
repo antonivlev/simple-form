@@ -186,7 +186,7 @@ submitButton.onclick = (e) => {
     let url = "https://recruitment-submissions.netsells.co.uk/api/vacancies/javascript-developer/submissions";
     fetch( url, {method: "POST", mode: "no-cors", body: JSON.stringify(payload)} )
         .then(res => {
-            console.log(res);
+            console.log("response: ", res);
             window.location.hash = "#page6";
             
             // clean up loading appearance
